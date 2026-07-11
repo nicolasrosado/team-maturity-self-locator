@@ -1,0 +1,23 @@
+team-maturity-self-locator (the "maturity-self-locator" Claude skill)
+Copyright (c) 2026 Nicolas Rosado
+
+Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike
+4.0 International License (CC BY-NC-SA 4.0). See the LICENSE file for the
+full legal code, or https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+--------------------------------------------------------------------------------
+Nature of this work
+
+This repository contains a documentation / prompt artifact (a Claude skill
+written in Markdown), not executable software. Creative Commons licenses are
+intended for such content works. CC BY-NC-SA 4.0 is chosen deliberately, to
+keep this work a free, non-commercial gift to the community.
+
+--------------------------------------------------------------------------------
+Credit for the underlying concepts
+
+Built on Nicolas Rosado's original Bounded-Rationality Maturity Scale framework.
+The named lenses used as axes (Herbert Simon; Amy Edmondson; Timothy R. Clark;
+Matthew Skelton & Manuel Pais / Team Topologies; Dragan Stepanovic;
+Margaret-Anne Storey; Ron Westrum; and others) are the intellectual property of
+their respective authors, credited where they appear and not claimed here.
