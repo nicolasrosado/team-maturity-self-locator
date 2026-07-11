@@ -6,7 +6,7 @@
 > team on the **Bounded-Rationality Maturity Scale** (Nicolas Rosado) and suggests the single
 > highest-leverage next move. A *living tool*, continuously improved.
 
-**Skill command:** `/maturity-self-locator` · **Version 1.0.0** · Free gift to the community (**CC BY-NC-SA 4.0**)
+**Skill command:** `/team-maturity-self-locator` · **Version 1.0.0** · Free gift to the community (**CC BY-NC-SA 4.0**)
 
 > This repository is the **canonical source of truth** for the skill.
 
@@ -26,34 +26,33 @@ self-locator). Everything lives here:
 The skill is a single file. Place it so it sits at:
 
 ```
-~/.claude/skills/maturity-self-locator/SKILL.md
+~/.claude/skills/team-maturity-self-locator/SKILL.md
 ```
 
 For example:
 
 ```bash
 git clone https://github.com/<your-account>/team-maturity-self-locator.git
-mkdir -p ~/.claude/skills/maturity-self-locator
-cp team-maturity-self-locator/SKILL.md ~/.claude/skills/maturity-self-locator/
+mkdir -p ~/.claude/skills/team-maturity-self-locator
+cp team-maturity-self-locator/SKILL.md ~/.claude/skills/team-maturity-self-locator/
 ```
 
 To stay in sync with updates, you can symlink instead of copying:
 
 ```bash
-mkdir -p ~/.claude/skills/maturity-self-locator
-ln -sf "$(pwd)/team-maturity-self-locator/SKILL.md" ~/.claude/skills/maturity-self-locator/SKILL.md
+mkdir -p ~/.claude/skills/team-maturity-self-locator
+ln -sf "$(pwd)/team-maturity-self-locator/SKILL.md" ~/.claude/skills/team-maturity-self-locator/SKILL.md
 # then `git pull` in the repo picks up new versions automatically
 ```
 
-*(Only `SKILL.md` is loaded by Claude. The repo name and the skill command differ on purpose:
-the repo is `team-maturity-self-locator`, the command stays `/maturity-self-locator`.)*
+*(Only `SKILL.md` is loaded by Claude.)*
 
 ## Run
 
 In Claude Code (or any Claude that loads skills), type:
 
 ```
-/maturity-self-locator
+/team-maturity-self-locator
 ```
 
 Then answer the questions. The skill walks your team through **9 axes**, computes your **floor**

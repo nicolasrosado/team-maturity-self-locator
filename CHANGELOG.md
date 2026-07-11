@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the `maturity-self-locator` skill are recorded here.
+All notable changes to the `team-maturity-self-locator` skill are recorded here.
 The skill line is versioned independently from the research-suite documents.
 
 ## [1.0.0] - 2026-07
