@@ -1,5 +1,7 @@
 # team-maturity-self-locator
 
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
 > **A Claude skill.** An interactive, non-judgmental self-assessment that locates a software
 > team on the **Bounded-Rationality Maturity Scale** (Nicolas Rosado) and suggests the single
 > highest-leverage next move. A *living tool*, continuously improved.
