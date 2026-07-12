@@ -1,6 +1,6 @@
 ---
 name: team-maturity-self-locator
-version: 1.0.0
+version: 1.1.0
 description: >
   Interactively locate a software team on the Bounded-Rationality Maturity Scale.
   Ask the user to rate their team on 9 axes (8 lenses + feedback), compute the level
@@ -12,7 +12,7 @@ description: >
 
 # Team Maturity Self-Locator (interactive)
 
-> **Version 1.0.0** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
+> **Version 1.1.0** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency - including on the licensing, which I'm sharing a tool under for the first time - is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
 
 > **Install & run**, drop this folder into `~/.claude/skills/team-maturity-self-locator/`, then type `/team-maturity-self-locator` in Claude Code (or any Claude that loads skills). No setup; nothing leaves the conversation.
 
@@ -52,7 +52,7 @@ A full session walks this path, **locate, never grade**:
 
 **Make every hand-back a set of *selectable* choices, one thing at a time.** Whenever you end your turn expecting the user to choose, **use an interactive option picker if the environment provides one** (a multiple-choice / question tool that renders **clickable options**, typically 2–4, e.g. Claude Code's question tool) so the user **selects** rather than retypes. Only if no such tool exists, fall back to a short list of **labeled options** in text (bold each label, e.g. **map the scale first** / **dive straight in**) that they pick by naming, offer *options, not digits* (never *"reply with a number"*). Either way, **fold the relevant actions in as options too**, e.g. **explain** (go deeper on this lens), **skip**, **see the full matrix**, so the user always sees what they can do next. **Never stack two separate questions in one turn** (the classic bug: offering *map-or-dive* **and** *pace* together): do them **in sequence**, ask one, act on the answer, *then* the next. **The one exception is the scale ratings**: an axis is the **five labeled rungs L1–L5**, offer them as options too (if the picker caps below five, list the rungs and take the number **1–5**). If a reply could fit more than one pending question, you stacked too many, re-ask one at a time.
 
-> **If the team has a previous *waypoint*** (from a past run), they can **paste the saved `BR-LOCATOR WAYPOINT` block, or load the saved `.txt` file**, either works. Read it first: its `date` and 9 scores (**the waypoint block alone is enough to re-locate**, the ADR isn't needed for the trajectory). You'll use it at the **Close** to show the **trajectory** (an arrow per axis + time elapsed), comparing the team **only to its own past self**. If they're not sure what it looks like, **offer to show the worked example at the end of this skill** (*## Example output*). No prior waypoint? Just run fresh. **Validate it: a valid waypoint has BOTH (i) the `=== BR-LOCATOR WAYPOINT … ===` markers AND (ii) the POSTURE header. If either is missing, treat it as invalid, don't use the numbers silently: name what's missing **and say why it matters, using this line verbatim**, *"Why it's mandatory: a waypoint **is** a comparison artifact, a comparison **to your team's own past self, never to other teams**, and any comparison already invites the ranking prism, so the anti-ranking frame must travel with the numbers, never after them."*, then **re-attach the POSTURE *verbatim***, copy the exact POSTURE header block below, word for word; **never paraphrase, shorten or reword it** (a paraphrase drifts and silently brings back wording we removed, e.g. "reported upward" instead of "reported up to management"). Confirm it really is a BR-LOCATOR waypoint, then read the scores (a bare score is exactly what this tool refuses to be). If the block or file looks partial or altered, ask for the full one.**
+> **If the team has a previous *Team Maturity Snapshot*** (from a past run), they can **paste it back, or load the saved `.txt` file** - the skill reads the `BR-LOCATOR WAYPOINT` block inside (pasting just that block works too). Read it first: its `date` and 9 scores (**the waypoint block alone is enough to re-locate**, the ADR isn't needed for the trajectory). You'll use it at the **Close** to show the **trajectory** (an arrow per axis + time elapsed), comparing the team **only to its own past self**. If they're not sure what it looks like, **offer to show the worked example at the end of this skill** (*## Example output*). No prior waypoint? Just run fresh. **Validate it: a valid waypoint has BOTH (i) the `=== BR-LOCATOR WAYPOINT … ===` markers AND (ii) the POSTURE header. If either is missing, treat it as invalid, don't use the numbers silently: name what's missing **and say why it matters, using this line verbatim**, *"Why it's mandatory: a waypoint **is** a comparison artifact, a comparison **to your team's own past self, never to other teams**, and any comparison already invites the ranking prism, so the anti-ranking frame must travel with the numbers, never after them."*, then **re-attach the POSTURE *verbatim***, copy the exact POSTURE header block below, word for word; **never paraphrase, shorten or reword it** (a paraphrase drifts and silently brings back wording we removed, e.g. "reported upward" instead of "reported up to management"). Confirm it really is a BR-LOCATOR waypoint, then read the scores (a bare score is exactly what this tool refuses to be). If the block or file looks partial or altered, ask for the full one.**
 
 1. **Open** (2–3 sentences): explain it's a **locator, not a grade**, say it **explicitly**:
    **there's no "good" or "bad" team here** ("good/bad" is subjective), **each level is an
@@ -61,7 +61,7 @@ A full session walks this path, **locate, never grade**:
    **disarms the defensive reflex** before the rating starts. Best answered *honestly* and
    ideally reflecting the **whole team's** view; each axis is rated **1–5** (L1 = lowest,
    L5 = highest). **Offer the 30-second scale overview** (*"want a quick map of the scale first, or dive in?"*), 
-   give it only if that option is picked (see *The scale at a glance*). **End the open with this first choice as *selectable options*** (per the *selectable choices* rule above), three of them: **Map the scale first** (the 30-second overview), **Skip the map** (go on toward the axes), and, for a **returning team**, **Load a saved waypoint** (paste the `BR-LOCATOR WAYPOINT` block or attach the `.txt`, to get the **trajectory** at the close, validate it first, above). **Don't bury the waypoint**, a first-timer won't know it exists, so keep it a **visible option**, not fine print (first time? nothing to bring, run fresh and they leave with a waypoint to keep next time). Then, whichever they pick (after showing the map or validating the waypoint), **ask the pace as a *second*, separate selectable choice** before axis 1, never stacked with the first: **one axis at a time** (guided, the default) or **several at once**.
+   give it only if that option is picked (see *The scale at a glance*). **End the open with this first choice as *selectable options*** (per the *selectable choices* rule above), three of them: **Map the scale first** (the 30-second overview), **Skip the map** (go on toward the axes), and, for a **returning team**, **Load a saved Snapshot** (paste your previous Team Maturity Snapshot or attach the `.txt` - the skill reads the `BR-LOCATOR WAYPOINT` block inside - to get the **trajectory** at the close, validate it first, above). **Don't bury this option**, a first-timer won't know it exists, so keep it a **visible option**, not fine print (first time? nothing to bring, run fresh and they leave with a Team Maturity Snapshot to keep next time). Then, whichever they pick (after showing the map or validating the waypoint), **ask the pace as a *second*, separate selectable choice** before axis 1, never stacked with the first: **one axis at a time** (guided, the default) or **several at once**.
 2. **Walk the 9 axes** (below). For each: name it, give the **L1→L5 ladder** in one line, and
    ask the user to pick the rung that fits **today**. **Default to one axis at a time, each with its example/anchor** so the person self-identifies (the **pace** is its own separate selectable choice, asked right after the opening choice and before axis 1, see *Open* above, never stacked); ask a short follow-up if an answer seems uncertain. Accept ranges ("3–4") and take the
    lower of the two (be conservative, a floor you can defend).
@@ -185,15 +185,30 @@ Then the **same step on a floor axis**, rung by rung (here Feedback, the engine;
     that improves the next version of the skill."* Product feedback = a comment about the **tool**
     (its wording, flow, usefulness), not a user updating their own answer.
 
-### The session output to keep - waypoint + draft ADR (offer at the close)
+### The session output to keep - the Team Maturity Snapshot (offer at the close)
 
-At the close, **offer** to hand the team two short artifacts they keep themselves (nothing is stored, the tool is stateless). The score is a **private waypoint, not a grade**, it exists only to feed the team's *own* next comparison. **Non-negotiables:** (a) **the output MUST lead with the POSTURE header below once, at the very top**, **reproduced *verbatim*** (copy it word-for-word from the block below, **never paraphrase, shorten or reword it**), then the waypoint and the ADR follow; **do not repeat it before each block.** *(Why it's mandatory: a waypoint **is** a comparison artifact, a comparison **to your team's own past self, never to other teams**, and any comparison already invites the ranking prism, so the anti-ranking frame must travel with the numbers, never after them.)* An output (or any exported file) without it is invalid; (b) the ADR is **always a `PROPOSED` draft**, you *propose*, the **team ratifies** (they name the owner, set the review date, and change the status themselves); (c) if a prior waypoint was pasted at the open, add a short **trajectory** read, an arrow per axis (↗ climbed / → held / ↘ slipped) + **time elapsed** + whether the prior move was kept, comparing the team **only to its own past self**; **never** points, badges, rankings, or another team.
+At the close, **offer** to hand the team a **Team Maturity Snapshot** they keep (one artifact: a header + Posture + Waypoint + ADR + a usage-and-license footer; nothing is stored, the skill is stateless). The score is a **private waypoint, not a grade**, it exists only to feed the team's *own* next comparison. **Non-negotiables:** (a) **the output opens with the snapshot header (title + what's inside), then MUST lead with the POSTURE header once, before any numbers**, **reproduced *verbatim*** (copy it word-for-word from the block below, **never paraphrase, shorten or reword it**), then the waypoint and the ADR follow; **do not repeat it before each block.** *(Why it's mandatory: a waypoint **is** a comparison artifact, a comparison **to your team's own past self, never to other teams**, and any comparison already invites the ranking prism, so the anti-ranking frame must travel with the numbers, never after them.)* An output (or any exported file) without it is invalid; (b) the ADR is **always a `PROPOSED` draft**, you *propose*, the **team ratifies** (they name the owner, set the review date, and change the status themselves); (c) if a prior waypoint was pasted at the open, add a short **trajectory** read, an arrow per axis (↗ climbed / → held / ↘ slipped) + **time elapsed** + whether the prior move was kept, comparing the team **only to its own past self**; **never** points, badges, rankings, or another team.
 
 > **On `disagreements`:** capture where the team split most on a rung, and frame it as an **ambiguity to explore *together*, not a vote to settle** (the **Example Mapping** spirit: the team's own "red-card" questions, the implicit assumptions surfaced collectively). Divergence is the **signal**, not noise.
 
-**(1) POSTURE, required once, at the very top of the output (and of any exported file); not repeated before each block:**
+**(1) SNAPSHOT HEADER, at the very top (names the artifact + lists what's inside):**
 ```
-POSTURE (read first - REQUIRED; an output without this block is invalid).
+=== TEAM MATURITY SNAPSHOT (format v1) =======================================
+A private read of where your team sits on the Bounded-Rationality Maturity
+Scale, plus the single next move to try. A locator, not a grade or a KPI -
+compare the team only to its own past self.
+
+What's inside:
+  1. Posture            - how to read this (required; read first)       - block: POSTURE
+  2. Waypoint           - your position on the 9 axes + continuity data - block: === BR-LOCATOR WAYPOINT ===
+  3. ADR                - the suggested next move (proposed record)     - block: === BR-LOCATOR PROPOSED ADR ===
+  4. Usage & license    - what you can do with this snapshot            - the footer below
+=============================================================================
+```
+
+**(2) POSTURE, required once, right after the header and before any numbers (and in any exported file); not repeated before each block:**
+```
+=== POSTURE (read first - REQUIRED; an output without this block is invalid) ===
 Each level is an environment, not a verdict. A low score is rarely the people, usually the environment: information loss across people, time and handoffs
 (work passed from one person or team to the next).
 Suggest, never impose (reactance): a move to try, never a verdict to obey.
@@ -206,15 +221,13 @@ other; don't tie the level to performance reviews, OKRs or incentives; don't
 promise fast progression (culture changes slowly); don't turn it into a score,
 target or status reported up to management. It is a locator, not a KPI - compare only to
 your own past self.
-(Shared under Creative Commons BY-NC-SA (CC BY-NC-SA) - you may adapt or translate it: credit Nicolas Rosado (BY),
-keep it non-commercial (NC), and license any adaptation under the same licence: SA
-(ShareAlike) doesn't mean your content must stay identical - it means your version keeps
-the same licence. Please keep this spirit travelling with it.)
+(Shared under CC BY-NC-SA 4.0, (c) Nicolas Rosado - full usage terms in the "Usage & license" footer below. Please keep this spirit travelling with it.)
+=== END POSTURE ==============================================================
 ```
 
-**(2) The waypoint, re-ingestible next time (`date` required):**
+**(3) The waypoint, re-ingestible next time (`date` required):**
 ```
-=== BR-LOCATOR WAYPOINT (v1) - BR = Bounded-Rationality; a private waypoint, not a grade ===
+=== BR-LOCATOR WAYPOINT (format v1) - BR = Bounded-Rationality; a private waypoint, not a grade ===
 date: <YYYY-MM-DD>            # required - used to compute time elapsed next run
 team: <internal label>       # never aggregated or compared to other teams
 axes:                        # the 9 scores, 1–5
@@ -234,12 +247,12 @@ move: "<the one proposed move>"
 review_on: <team-set date>   # required
 adr: ADR-DRAFT-<date>
 note: paste this back next time to see what CHANGED (↗/→/↘) - for your team only.
-=== END WAYPOINT ===
+=== END WAYPOINT =============================================================
 ```
 
-**(3) A draft ADR, modal; the team ratifies (never emit it as decided):**
+**(4) A draft ADR, modal; the team ratifies (never emit it as decided):**
 ```
-=== BR-LOCATOR PROPOSED ADR (v1) - a draft to decide on together, not a ready-made decision ===
+=== BR-LOCATOR PROPOSED ADR - a draft to decide on together, not a ready-made decision ===
 # ADR-DRAFT - <date> - Proposed move: <move>
 Status: PROPOSED (draft - the team decides together: accept, change, or drop)
 
@@ -259,9 +272,8 @@ Status: PROPOSED (draft - the team decides together: accept, change, or drop)
 
 Owner (named by the team): ______
 Review date (set by the team): ______   # suggested horizon: next re-locate (~1 quarter)
-=== END ADR ===
 
-This is a suggestion from a locator, not a decision. It becomes real only when the team
+This is a suggestion from the Team Maturity Self-Locator, not a decision. It becomes real only when the team
 accepts it - then change Status to "Accepted / Trying". Suggest, never impose.
 Disagreement while deciding is healthy - an opportunity to clarify the ambiguity
 together and foster collaboration; safe dissent is a sign of psychological safety.
@@ -277,19 +289,41 @@ If it doesn't help, adjust or drop it: that's learning, not failure. Never conve
 into a KPI, a target, or a status reported up to management.
 (The temptation to turn an experiment into a result-commitment is strong - especially
 if ADRs are new to you - so it is named here, on purpose, to defuse it.)
+=== END ADR ==================================================================
 ```
 
-**(4) Footer, end the output (and the exported file) with the source pointer:**
+**(5) Usage & license footer, end the output (and the exported file) with it:**
 ```
- - This waypoint is part of the Bounded-Rationality practitioner suite.
-Everything - the white papers, the ebook, the scale and this self-locator - lives here:
-https://nicolasrosado.github.io/aiagents-montreal/research/bounded-rationality/
-(a free gift to the community, CC BY-NC-SA).
+--- What you can do with this Team Maturity Snapshot - CC BY-NC-SA 4.0 - (c) Nicolas Rosado ---
+This Team Maturity Snapshot (Posture + Waypoint + ADR) is for your own or your team's reading.
+
+  Use it inside your own team, for yourselves ..............  OK, free
+  Read it to form your own view (even as a consultant) .....  OK, free
+  Share or publish it (non-commercial) .....................  OK, with credit to the author
+  Give it to a client as a paid deliverable, or sell it ....  NO - commercial, not allowed under the free license; needs the author's permission
+  Build it into a paid product / service ...................  NO - commercial, not allowed under the free license; needs the author's permission
+
+The line is about the OUTPUT - what gets shipped - not your intentions:
+keep it for yourselves / non-commercial = free; but a paid deliverable or a sale - even one
+your own team produces - is commercial, which the free license does NOT allow: you need the author's permission first.
+
+Cited authors keep their rights - don't re-attribute their ideas or words to yourself.
+Part of the Bounded-Rationality Research Suite: https://nicolasrosado.github.io/aiagents-montreal/research/bounded-rationality/
+Using the skill itself through your agent, or redistributing / adapting it - full terms:
+https://github.com/nicolasrosado/team-maturity-self-locator#using-this-under-the-license
 ```
 
-**Offer to export.** After showing them, **offer to save the waypoint (and the ADR) as a plain-text `.txt` file** the team keeps, e.g. `maturity-waypoint-<team>-<YYYY-MM-DD>.txt` (the `maturity-` prefix matches the skill's name). **Ask for a short team label** (it fills the `team:` field and the filename); if they'd rather not name it, **default to `team`** (`maturity-waypoint-team-<date>.txt`), only an internal marker, never compared to others. The `date` unit is the **day** (this is a quarterly tool); if more than one is generated the same day, add a short time suffix like `-1430` to keep them distinct, seconds aren't needed. The block *is* the input format: at the next run they **paste it back, or load the file**, and the skill reads it. Nothing is stored on our side. *(Keep the waypoint itself `.txt` so it pastes back / reloads **verbatim**, it's already readable; a markdown viewer would only reflow the `===` / `#` / indentation and risk breaking the round-trip. A logbook you *read* rather than re-ingest can be `.md` if you prefer it rendered.)*
+**Offer to export.** After showing them, **offer to save the whole Team Maturity Snapshot as a plain-text `.txt` file** the team keeps, e.g. `<team-slug>_maturity-snapshot_<YYYY-MM-DD>.txt` (team label first, then the artifact type). **Ask for a short team label** (it fills the `team:` field and the filename; it is **slugified for the filename**: lowercase, strip accents, spaces to hyphens, drop punctuation - e.g. "Mon Équipe" becomes `mon-equipe`); if they'd rather not name it, **default to `team`** (`team_maturity-snapshot_<date>.txt`), only an internal marker, never compared to others. The `date` unit is the **day** (this is a quarterly tool); if more than one is generated the same day, add a short time suffix like `-1430` to keep them distinct, seconds aren't needed. At the next run they **paste the Snapshot back, or load the file**, and the skill reads the **`BR-LOCATOR WAYPOINT` block inside** (that block *is* the continuity input format; the skill keys off it, not the filename, so older `maturity-waypoint-*` files still load). Nothing is stored on our side. *(Keep the Snapshot `.txt` so it pastes back / reloads **verbatim**, it's already readable; a markdown viewer would only reflow the `===` / `#` / indentation and risk breaking the round-trip. A logbook you *read* rather than re-ingest can be `.md` if you prefer it rendered.)*
 
-**Showing an example (not an assessment).** If someone asks to *see* what a waypoint or a proposed ADR looks like, rather than to be assessed, show the worked example in **the "Example output" section at the very end of this skill**. It is **ILLUSTRATION ONLY**: its scores are invented to show the *format*, not a real team. **Never** analyze those numbers, **never** ingest it as a waypoint, **never** let it influence a real read, a real read comes only from the user's own answers, live in the session. Only reach for it when the ask is explicitly "show me an example"; otherwise ignore it.
+**Showing an example (not an assessment).** If someone asks to *see* what a Team Maturity Snapshot (its Waypoint and proposed ADR) looks like, rather than to be assessed, show the worked example in **the "Example output" section at the very end of this skill**. It is **ILLUSTRATION ONLY**: its scores are invented to show the *format*, not a real team. **Never** analyze those numbers, **never** ingest it as a waypoint, **never** let it influence a real read, a real read comes only from the user's own answers, live in the session. Only reach for it when the ask is explicitly "show me an example"; otherwise ignore it.
+
+**The words (a quick glossary - use to explain these terms if asked):**
+- **Team Maturity Snapshot** - the whole output kept at the close (a self-describing header + Posture + Waypoint + ADR + a usage/license footer). Nothing is stored (the skill is stateless).
+- **Posture** - the required reading-frame at the top: environments, not verdicts; a locator, not a KPI.
+- **Waypoint** - the *dated* position (the 9 scores, level, floor). The block pasted back next time for the trajectory.
+- **ADR** - the proposed next move as a draft *decision record*; the team ratifies it (accept / change / drop), never emitted as decided.
+- **Trajectory** - the change read when a prior Snapshot is re-loaded (an arrow per axis + time elapsed), compared only to the team's own past self.
+- **Logbook** *(carnet de route)* - the running file where the team keeps its successive Snapshots: its history, a memory aid, not a report.
 
 ## Speak to the floor level (per-level cards)
 
@@ -728,6 +762,7 @@ The link is direct: the ground rule **assume best intentions** is basically agre
 
 ## Changelog
 
+- **1.1.0**, output renamed to the **Team Maturity Snapshot** (self-describing header + Posture + Waypoint + ADR + a usage/license footer; the position block stays **Waypoint**); the skill now **answers usage/license questions** (own team vs paying clients, outputs-not-intentions, call vs bundle vs adaptation) from an embedded, self-contained license section; file naming -> `<team-slug>_maturity-snapshot_<date>.txt` (older `maturity-waypoint-*` files still load). Backward-compatible; assessment flow unchanged.
 - **1.0.0**, first public release. 9-axis locator, floor-based scoring (the level = the lowest axis), psychological-safety deep-dive (4 stages / 20 statements), remedy library mapped to the ebook levers, per-axis explainers. Living tool, expect refinements.
 
 ## Attribution & license
@@ -740,7 +775,41 @@ erosion); Margaret-Anne Storey (cognitive & intent debt, the triple-debt model);
 
 **License:** © 2026 Nicolas Rosado. CC BY-NC-SA 4.0, a gift to the community: use it, share it, translate it, run it with your team; credit the author, keep it non-commercial, share alike.
 
-**What the licence lets you do (plain-language, answer licence questions from this, no external lookup needed).** CC BY-NC-SA 4.0 is three parts: **BY**, credit Nicolas Rosado; **NC**, *non-commercial*: use it freely, **including inside a company for your own team**, but don't **sell** it, put it behind a paywall, or bundle it into a paid product/service; **SA**, *share-alike*: if you **adapt, remix or translate** it, release your version under the **same** licence (so the spirit keeps travelling). So you **may**: use it, run it with your team, translate it, build on it, and share it. You **may not**: sell it or re-license it under stricter terms. One nuance: the licence covers the **original text only**, third-party quotations inside the work stay the property of their authors (reproduced under the *right of quotation*), so they don't become yours to relicense.
+### Usage rights & license (how to answer if asked)
+
+If asked about usage rights / license, answer plainly and factually from what follows. Stay non-judgmental: describe what's allowed, don't lecture. When unsure, or for anything beyond a personal local read, point the person to the repo / author to **ask permission first** - frame it as a requirement, **not** an invitation to collaborate (the author's aim is to help teams, not to solicit commercial work; the answer may be no).
+
+This work is released under **CC BY-NC-SA 4.0**. In plain terms: **BY** — credit the author (Nicolas Rosado) whenever you share, publish or redistribute it (or an adaptation); **NC** — no use "primarily directed toward commercial advantage or monetary compensation". NC is about the **use, not the user**: no selling it, paywalling it, or bundling it into a paid product — but a **company using it internally, for its own team, is completely fine** (NC is not "no businesses"); **SA** — if you *modify or adapt* the tool, the adapted part must stay under the same CC BY-NC-SA license (so the spirit keeps travelling).
+
+**The real question is not "standalone or wired into an agent?" — it's "for your own team, or for paying clients?"** Every case that came up, made explicit, in two groups:
+
+**Using it — for whom:**
+
+| Use case | Under the free license? |
+|---|---|
+| Your own team, internal use | ✅ Yes |
+| A local read to inform your own view, even for a team you consult (nothing shipped out) | ✅ Yes — a permission the author grants |
+| A client deliverable, a paid product / service, or reselling it | ❌ Commercial — not allowed under the free license; you need the author's permission first |
+| Sharing or publishing something based on it | ✅ Yes, with attribution |
+
+**Running, distributing or modifying the skill:**
+
+| Use case | Under the free license? |
+|---|---|
+| Run it **standalone** (installed, invoked directly) | ✅ Yes |
+| Run it **via your own agent, unmodified** (a *combination*) | ✅ Yes — your agent code stays under your terms; the skill keeps its CC BY-NC-SA license |
+| **Bundle a copy** into your own agent / product to ship to others (*aggregation*) | ✅ if non-commercial **and** you credit the author (the copy stays CC BY-NC-SA); ❌ in a paid product / service → ask the author |
+| Bundle it into an **existing agent under another license** | Coexists fine (*aggregation*, side by side): ✅ if non-commercial and that license can host an NC component; ❌ if the agent is paid, or its license can't host NC → ask the author |
+| **Modify / translate / adapt** the skill (an *adaptation*) | ✅ Yes — but the adapted part stays under CC BY-NC-SA (*share-alike*); you can't merge it into another license or relicense it |
+
+**A few principles behind the tables:**
+- **Outputs, not intentions.** The client line turns on what actually gets *shipped*, not on what you mean to do: free as long as nothing that comes out of it is delivered to a client, sold, or built into a paid offering. It holds for the skill's own output too (the **Team Maturity Snapshot** — its Waypoint and proposed ADR): keep it for your own or your team's reading; hand it to a client as a paid deliverable or sell it, and it's commercial. Intentions can't be verified; a shipped output can. Concretely: ✅ you run it and read the result to shape your own thinking → fine; ❌ a report built from it goes into a paid client deliverable → commercial; ❌ it's embedded in a paid product or service → commercial.
+- **Coexist ≠ merge.** Placing the skill unmodified beside your own code lets the two licenses coexist — your code stays yours, the skill stays CC BY-NC-SA. What you can't do is *merge* it into another license or relicense it; CC BY-NC-SA also can't live inside something that must stay commercially usable.
+- **One constant across every case:** the skill copy always stays CC BY-NC-SA, attribution applies whenever you distribute, and NC gates **anything commercial** — a paid product or service, a client deliverable, **marketing or promotional use, or a site that earns ad revenue** — → you need the author's permission.
+- **Cited authors keep their rights.** The license covers Nicolas Rosado's original text only. The thinkers and practitioners quoted or built upon (credited just above) keep their own rights — reproduced under the right of quotation. You can't relicense them, and you can't re-attribute their ideas or words to yourself; credit stays with them.
+- **The local-read permission** is granted by the author as the rights holder, on top of the license; the CC BY-NC-SA license itself is unchanged (not a modified or custom license).
+
+For a commercial or client use case: it isn't granted by default - ask the author's permission first (it may or may not be granted). The aim of this work is to help teams, not to sell. Full terms & repo: <https://github.com/nicolasrosado/team-maturity-self-locator#using-this-under-the-license>
 
 **Based on, and worth reading in full.** This skill only *locates*; the documents go deep. **Everything, the white papers, the ebook, the scale and the self-locator, lives here:** <https://nicolasrosado.github.io/aiagents-montreal/research/bounded-rationality/> (a free gift to the community, CC BY-NC-SA). At the **close of a session, point the team to that page and invite them to read the one that matches their floor**:
 - ***The Bounded-Rationality Maturity Scale***, the 5 levels and 8 lenses this skill is built on (walked as **9 axes**: the 8 lenses plus feedback, scored so it never drops off the floor).
@@ -750,7 +819,7 @@ erosion); Margaret-Anne Storey (cognitive & intent debt, the triple-debt model);
 
 ## Example output (illustration only - never analyze)
 
-Show this **only** if someone asks to *see* what the output looks like. The scores below are **invented** to show the *format* (a waypoint block + a proposed ADR), they are **not a real team**. **Never** read these numbers as data, **never** ingest this as a waypoint, **never** let it influence a real read. A real read comes only from the user's own answers, live in the session.
+Show this **only** if someone asks to *see* what the output looks like. The scores below are **invented** to show the *format* (a full Team Maturity Snapshot: header + Posture + Waypoint + ADR + usage footer), they are **not a real team**. **Never** read these numbers as data, **never** ingest this as a waypoint, **never** let it influence a real read. A real read comes only from the user's own answers, live in the session.
 
 ```
 ################################################################################
@@ -760,7 +829,19 @@ Show this **only** if someone asks to *see* what the output looks like. The scor
 # own answers, live in the session.
 ################################################################################
 
-POSTURE (read first - REQUIRED; an output without this block is invalid).
+=== TEAM MATURITY SNAPSHOT (format v1) =======================================
+A private read of where your team sits on the Bounded-Rationality Maturity
+Scale, plus the single next move to try. A locator, not a grade or a KPI -
+compare the team only to its own past self.
+
+What's inside:
+  1. Posture            - how to read this (required; read first)       - block: POSTURE
+  2. Waypoint           - your position on the 9 axes + continuity data - block: === BR-LOCATOR WAYPOINT ===
+  3. ADR                - the suggested next move (proposed record)     - block: === BR-LOCATOR PROPOSED ADR ===
+  4. Usage & license    - what you can do with this snapshot            - the footer below
+=============================================================================
+
+=== POSTURE (read first - REQUIRED; an output without this block is invalid) ===
 Each level is an environment, not a verdict. A low score is rarely the people, usually the environment: information loss across people, time and handoffs
 (work passed from one person or team to the next).
 Suggest, never impose (reactance): a move to try, never a verdict to obey.
@@ -773,12 +854,10 @@ other; don't tie the level to performance reviews, OKRs or incentives; don't
 promise fast progression (culture changes slowly); don't turn it into a score,
 target or status reported up to management. It is a locator, not a KPI - compare only to
 your own past self.
-(Shared under Creative Commons BY-NC-SA (CC BY-NC-SA) - you may adapt or translate it: credit Nicolas Rosado (BY),
-keep it non-commercial (NC), and license any adaptation under the same licence: SA
-(ShareAlike) doesn't mean your content must stay identical - it means your version keeps
-the same licence. Please keep this spirit travelling with it.)
+(Shared under CC BY-NC-SA 4.0, (c) Nicolas Rosado - full usage terms in the "Usage & license" footer below. Please keep this spirit travelling with it.)
+=== END POSTURE ==============================================================
 
-=== BR-LOCATOR WAYPOINT (v1) - BR = Bounded-Rationality; a private waypoint, not a grade ===
+=== BR-LOCATOR WAYPOINT (format v1) - BR = Bounded-Rationality; a private waypoint, not a grade ===
 date: 2026-07-03            # required - used to compute time elapsed next run
 team: team                 # never aggregated or compared to other teams
 axes:                      # the 9 scores, 1–5
@@ -798,9 +877,9 @@ move: "Make feedback durable across time - capture decisions + their why in ADRs
 review_on: 2026-10-03      # required - SUGGESTED (~1 quarter); the team sets its own
 adr: ADR-DRAFT-2026-07-03
 note: paste this back next time to see what CHANGED (↗/→/↘) - for your team only.
-=== END WAYPOINT ===
+=== END WAYPOINT =============================================================
 
-=== BR-LOCATOR PROPOSED ADR (v1) - a draft to decide on together, not a ready-made decision ===
+=== BR-LOCATOR PROPOSED ADR - a draft to decide on together, not a ready-made decision ===
 # ADR-DRAFT - 2026-07-03 - Proposed move: make feedback durable across time (ADRs + retro)
 Status: PROPOSED (draft - the team decides together: accept, change, or drop)
 
@@ -832,9 +911,8 @@ to carry the reasoning forward to whoever wasn't in the room.
 
 Owner (named by the team): ______
 Review date (set by the team): ______   # suggested horizon: next re-locate (~1 quarter, ~2026-10-03)
-=== END ADR ===
 
-This is a suggestion from a locator, not a decision. It becomes real only when the team
+This is a suggestion from the Team Maturity Self-Locator, not a decision. It becomes real only when the team
 accepts it - then change Status to "Accepted / Trying". Suggest, never impose.
 Disagreement while deciding is healthy - an opportunity to clarify the ambiguity
 together and foster collaboration; safe dissent is a sign of psychological safety.
@@ -850,9 +928,23 @@ If it doesn't help, adjust or drop it: that's learning, not failure. Never conve
 into a KPI, a target, or a status reported up to management.
 (The temptation to turn an experiment into a result-commitment is strong - especially
 if ADRs are new to you - so it is named here, on purpose, to defuse it.)
+=== END ADR ==================================================================
 
- - This waypoint is part of the Bounded-Rationality practitioner suite.
-Everything - the white papers, the ebook, the scale and this self-locator - lives here:
-https://nicolasrosado.github.io/aiagents-montreal/research/bounded-rationality/
-(a free gift to the community, CC BY-NC-SA).
+--- What you can do with this Team Maturity Snapshot - CC BY-NC-SA 4.0 - (c) Nicolas Rosado ---
+This Team Maturity Snapshot (Posture + Waypoint + ADR) is for your own or your team's reading.
+
+  Use it inside your own team, for yourselves ..............  OK, free
+  Read it to form your own view (even as a consultant) .....  OK, free
+  Share or publish it (non-commercial) .....................  OK, with credit to the author
+  Give it to a client as a paid deliverable, or sell it ....  NO - commercial, not allowed under the free license; needs the author's permission
+  Build it into a paid product / service ...................  NO - commercial, not allowed under the free license; needs the author's permission
+
+The line is about the OUTPUT - what gets shipped - not your intentions:
+keep it for yourselves / non-commercial = free; but a paid deliverable or a sale - even one
+your own team produces - is commercial, which the free license does NOT allow: you need the author's permission first.
+
+Cited authors keep their rights - don't re-attribute their ideas or words to yourself.
+Part of the Bounded-Rationality Research Suite: https://nicolasrosado.github.io/aiagents-montreal/research/bounded-rationality/
+Using the skill itself through your agent, or redistributing / adapting it - full terms:
+https://github.com/nicolasrosado/team-maturity-self-locator#using-this-under-the-license
 ```
