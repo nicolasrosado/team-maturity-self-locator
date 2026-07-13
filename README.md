@@ -6,7 +6,7 @@
 > team on the **Bounded-Rationality Maturity Scale** (Nicolas Rosado) and suggests the single
 > highest-leverage next move. A *living tool*, continuously improved.
 
-**Skill command:** `/team-maturity-self-locator` · **Version 1.0.0** · Free gift to the community (**CC BY-NC-SA 4.0**)
+**Skill command:** `/team-maturity-self-locator` · **Version 1.2.0** · Free gift to the community (**CC BY-NC-SA 4.0**)
 
 > This repository is the **canonical source of truth** for the skill.
 
