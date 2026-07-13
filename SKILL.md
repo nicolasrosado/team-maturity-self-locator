@@ -1,6 +1,6 @@
 ---
 name: team-maturity-self-locator
-version: 1.1.0
+version: 1.1.1
 description: >
   Interactively locate a software team on the Bounded-Rationality Maturity Scale.
   Ask the user to rate their team on 9 axes (8 lenses + feedback), compute the level
@@ -12,7 +12,7 @@ description: >
 
 # Team Maturity Self-Locator (interactive)
 
-> **Version 1.1.0** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency - including on the licensing, which I'm sharing a tool under for the first time - is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
+> **Version 1.1.1** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency - including on the licensing, which I'm sharing a tool under for the first time - is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
 
 > **Install & run**, drop this folder into `~/.claude/skills/team-maturity-self-locator/`, then type `/team-maturity-self-locator` in Claude Code (or any Claude that loads skills). No setup; nothing leaves the conversation.
 
@@ -163,7 +163,7 @@ Then the **same step on a floor axis**, rung by rung (here Feedback, the engine;
  L1 → L2   feared/suppressed → trapped
    ↓ overwhelming (▼ risk)
 ```
-- **The AI tell**, *gloss it whenever you use the term*: a **"tell"** in the poker sense, an *involuntary sign that gives away your hand*; here, a signal that reveals whether AI will **help or hurt**. Because **AI amplifies whatever already exists**, three axes weigh most: **Three bounds** (*information, cognition, time*, Simon), **Feedback**, and **Psychological safety**, **always name them with that gloss in the read-out**, never bare. If any of the three sits at **L1–L2**, warn that **AI will amplify the dysfunction (the existing gap) first**, deeper information loss (weak bounds), faster broken loops (weak feedback), or an inability to challenge the AI's output (weak safety), so raise them *before* adding more AI. **Keep it modal, a *potential* to watch, not a "danger zone" verdict.** And if a tell-axis is your **floor but not at L1–L2**, don't dramatize (no "alarm", no "danger"): note plainly that it's the floor *and* one of the three that weigh most on the **AI risk**, so it's the **highest-leverage lift**, treat it first. (When you flag *"this is one of the three AI-tells,"* explain in one line that the named axis is one of the three that weigh most on the **AI risk**, the ones to treat first.)
+- **The AI tell**, *gloss it whenever you use the term*: a **"tell"** in the poker sense, an *involuntary sign that gives away your hand*; here, a signal that reveals whether AI will **help or hurt**. Because **AI amplifies whatever already exists**, three axes weigh most: **Three bounds** (*information, cognition, time*, Simon), **Feedback**, and **Psychological safety**, **always name them with that gloss in the read-out**, never bare. If any of the three sits at **L1–L2**, warn that **AI will amplify the dysfunction (the existing gap) first**, deeper information loss (weak bounds), faster broken loops (weak feedback), or an inability to challenge the AI's output (weak safety), so raise them *before* adding more AI. **Keep it modal, a *potential* to watch, not a fixed or alarming verdict.** And if a tell-axis is your **floor but not at L1–L2**, state it plainly and calmly (neutral tone, no reassurance-by-negation, avoid phrasings like *"not in the danger zone"* or *"no alarm"*): note that it's the floor *and* one of the three that weigh most on the **AI risk**, so it's the **highest-leverage lift**, treat it first. (When you flag *"this is one of the three AI-tells,"* explain in one line that the named axis is one of the three that weigh most on the **AI risk**, the ones to treat first.)
 - **Your next move** = the migration lever for the **floor** level (below), **one move, not ten**, plus **why it's worth it** (the card's *why*). Frame it as a **team experiment** (try a few weeks → a retro decides keep / adjust / drop).
 - **A personal complement (offer lightly at the close, especially where mental health / isolation shows up):** beyond the team move, you *may* invite the person to reconnect through a **craft community, meetup or dojo**, a *third place* (Oldenburg), deliberate friction against the **isolation trap**, like the meetups this work grew from (the *third-place* remedy below). Personal and optional, **never imposed**; it favours the human connection AI quietly erodes.
 - **Close**: *locate, don't judge*, name where you are out loud, work the lowest axis, re-run
@@ -762,6 +762,7 @@ The link is direct: the ground rule **assume best intentions** is basically agre
 
 ## Changelog
 
+- **1.1.1**, wording only (no behaviour change): clarified the license section (invoking vs bundling vs adapting), and reworded the AI-tell read-out so it states the reading plainly and calmly, without the "danger zone" / "no alarm" phrasing (kept it modal, per the tool's non-judgmental framing).
 - **1.1.0**, output renamed to the **Team Maturity Snapshot** (self-describing header + Posture + Waypoint + ADR + a usage/license footer; the position block stays **Waypoint**); the skill now **answers usage/license questions** (own team vs paying clients, outputs-not-intentions, call vs bundle vs adaptation) from an embedded, self-contained license section; file naming -> `<team-slug>_maturity-snapshot_<date>.txt` (older `maturity-waypoint-*` files still load). Backward-compatible; assessment flow unchanged.
 - **1.0.0**, first public release. 9-axis locator, floor-based scoring (the level = the lowest axis), psychological-safety deep-dive (4 stages / 20 statements), remedy library mapped to the ebook levers, per-axis explainers. Living tool, expect refinements.
 
@@ -779,17 +780,17 @@ erosion); Margaret-Anne Storey (cognitive & intent debt, the triple-debt model);
 
 If asked about usage rights / license, answer plainly and factually from what follows. Stay non-judgmental: describe what's allowed, don't lecture. When unsure, or for anything beyond a personal local read, point the person to the repo / author to **ask permission first** - frame it as a requirement, **not** an invitation to collaborate (the author's aim is to help teams, not to solicit commercial work; the answer may be no).
 
-This work is released under **CC BY-NC-SA 4.0**. In plain terms: **BY** — credit the author (Nicolas Rosado) whenever you share, publish or redistribute it (or an adaptation); **NC** — no use "primarily directed toward commercial advantage or monetary compensation". NC is about the **use, not the user**: no selling it, paywalling it, or bundling it into a paid product — but a **company using it internally, for its own team, is completely fine** (NC is not "no businesses"); **SA** — if you *modify or adapt* the tool, the adapted part must stay under the same CC BY-NC-SA license (so the spirit keeps travelling).
+This work is released under **CC BY-NC-SA 4.0**. In plain terms: **BY** - credit the author (Nicolas Rosado) whenever you share, publish or redistribute it (or an adaptation); **NC** - no use "primarily directed toward commercial advantage or monetary compensation". NC is about the **use, not the user**: no selling it, paywalling it, or bundling it into a paid product, but a **company using it internally, for its own team, is completely fine** (NC is not "no businesses"); **SA** - if you *modify or adapt* the tool, the adapted part must stay under the same CC BY-NC-SA license (so the spirit keeps travelling).
 
-**The real question is not "standalone or wired into an agent?" — it's "for your own team, or for paying clients?"** Every case that came up, made explicit, in two groups:
+**The real question is not "standalone or wired into an agent?" It's "for your own team, or for paying clients?"** Every case that came up, made explicit, in two groups:
 
-**Using it — for whom:**
+**Using it - for whom:**
 
 | Use case | Under the free license? |
 |---|---|
 | Your own team, internal use | ✅ Yes |
-| A local read to inform your own view, even for a team you consult (nothing shipped out) | ✅ Yes — a permission the author grants |
-| A client deliverable, a paid product / service, or reselling it | ❌ Commercial — not allowed under the free license; you need the author's permission first |
+| A local read to inform your own view, even for a team you consult (nothing shipped out) | ✅ Yes - a permission the author grants |
+| A client deliverable, a paid product / service, or reselling it | ❌ Commercial - not allowed under the free license; you need the author's permission first |
 | Sharing or publishing something based on it | ✅ Yes, with attribution |
 
 **Running, distributing or modifying the skill:**
@@ -797,16 +798,16 @@ This work is released under **CC BY-NC-SA 4.0**. In plain terms: **BY** — cred
 | Use case | Under the free license? |
 |---|---|
 | Run it **standalone** (installed, invoked directly) | ✅ Yes |
-| Run it **via your own agent, unmodified** (a *combination*) | ✅ Yes — your agent code stays under your terms; the skill keeps its CC BY-NC-SA license |
+| Run it **via your own agent, unmodified** (a *combination*) | ✅ Yes, whatever your agent's own license: invoking isn't merging, so no license-compatibility question arises here (that only comes up if you *bundle/ship* it or *adapt* it). Your agent code stays under your terms; the skill keeps its CC BY-NC-SA license |
 | **Bundle a copy** into your own agent / product to ship to others (*aggregation*) | ✅ if non-commercial **and** you credit the author (the copy stays CC BY-NC-SA); ❌ in a paid product / service → ask the author |
 | Bundle it into an **existing agent under another license** | Coexists fine (*aggregation*, side by side): ✅ if non-commercial and that license can host an NC component; ❌ if the agent is paid, or its license can't host NC → ask the author |
-| **Modify / translate / adapt** the skill (an *adaptation*) | ✅ Yes — but the adapted part stays under CC BY-NC-SA (*share-alike*); you can't merge it into another license or relicense it |
+| **Modify / translate / adapt** the skill (an *adaptation*) | ✅ Yes - but the adapted part stays under CC BY-NC-SA (*share-alike*); you can't merge it into another license or relicense it |
 
 **A few principles behind the tables:**
-- **Outputs, not intentions.** The client line turns on what actually gets *shipped*, not on what you mean to do: free as long as nothing that comes out of it is delivered to a client, sold, or built into a paid offering. It holds for the skill's own output too (the **Team Maturity Snapshot** — its Waypoint and proposed ADR): keep it for your own or your team's reading; hand it to a client as a paid deliverable or sell it, and it's commercial. Intentions can't be verified; a shipped output can. Concretely: ✅ you run it and read the result to shape your own thinking → fine; ❌ a report built from it goes into a paid client deliverable → commercial; ❌ it's embedded in a paid product or service → commercial.
-- **Coexist ≠ merge.** Placing the skill unmodified beside your own code lets the two licenses coexist — your code stays yours, the skill stays CC BY-NC-SA. What you can't do is *merge* it into another license or relicense it; CC BY-NC-SA also can't live inside something that must stay commercially usable.
-- **One constant across every case:** the skill copy always stays CC BY-NC-SA, attribution applies whenever you distribute, and NC gates **anything commercial** — a paid product or service, a client deliverable, **marketing or promotional use, or a site that earns ad revenue** — → you need the author's permission.
-- **Cited authors keep their rights.** The license covers Nicolas Rosado's original text only. The thinkers and practitioners quoted or built upon (credited just above) keep their own rights — reproduced under the right of quotation. You can't relicense them, and you can't re-attribute their ideas or words to yourself; credit stays with them.
+- **Outputs, not intentions.** The client line turns on what actually gets *shipped*, not on what you mean to do: free as long as nothing that comes out of it is delivered to a client, sold, or built into a paid offering. It holds for the skill's own output too (the **Team Maturity Snapshot**, its Waypoint and proposed ADR): keep it for your own or your team's reading; hand it to a client as a paid deliverable or sell it, and it's commercial. Intentions can't be verified; a shipped output can. Concretely: ✅ you run it and read the result to shape your own thinking → fine; ❌ a report built from it goes into a paid client deliverable → commercial; ❌ it's embedded in a paid product or service → commercial.
+- **Coexist ≠ merge.** Placing the skill unmodified beside your own code lets the two licenses coexist: your code stays yours, the skill stays CC BY-NC-SA. What you can't do is *merge* it into another license or relicense it; CC BY-NC-SA also can't live inside something that must stay commercially usable. Only *adapting* triggers share-alike; merely invoking or bundling it unmodified does not, though attribution (BY) and non-commercial (NC) still apply in those cases.
+- **One constant across every case:** the skill copy always stays CC BY-NC-SA, attribution applies whenever you distribute, and NC gates **anything commercial** (a paid product or service, a client deliverable, **marketing or promotional use, or a site that earns ad revenue**): you need the author's permission.
+- **Cited authors keep their rights.** The license covers Nicolas Rosado's original text only. The thinkers and practitioners quoted or built upon (credited just above) keep their own rights, reproduced under the right of quotation. You can't relicense them, and you can't re-attribute their ideas or words to yourself; credit stays with them.
 - **The local-read permission** is granted by the author as the rights holder, on top of the license; the CC BY-NC-SA license itself is unchanged (not a modified or custom license).
 
 For a commercial or client use case: it isn't granted by default - ask the author's permission first (it may or may not be granted). The aim of this work is to help teams, not to sell. Full terms & repo: <https://github.com/nicolasrosado/team-maturity-self-locator#using-this-under-the-license>

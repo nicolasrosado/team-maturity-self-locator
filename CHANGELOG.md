@@ -3,6 +3,14 @@
 All notable changes to the `team-maturity-self-locator` skill are recorded here.
 The skill line is versioned independently from the research-suite documents.
 
+## [1.1.1] - 2026-07
+
+Wording only, no behaviour or feature change. Backward-compatible.
+
+- **License section clarified**: sharpened the wording on invoking vs bundling vs adapting the skill (invoking via your own agent isn't merging; only *adapting* triggers share-alike; attribution and non-commercial still apply), and cleaned the section's punctuation.
+- **AI-tell read-out reworded**: when a "tell" axis is the floor but not at L1-L2, the skill now states the reading plainly and calmly, without the "danger zone" / "no alarm" phrasing that could still surface in the output. Keeps it modal, consistent with the tool's non-judgmental framing.
+- **README**: the zoom bullet now reflects that the skill zooms into any floor axis with sub-structure (psychological safety, the three bounds, feedback, shared mental model), not psychological safety alone.
+
 ## [1.1.0] - 2026-07
 
 Output renamed and the skill made self-explanatory about usage rights. Backward-compatible.
