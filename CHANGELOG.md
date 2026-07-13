@@ -3,6 +3,15 @@
 All notable changes to the `team-maturity-self-locator` skill are recorded here.
 The skill line is versioned independently from the research-suite documents.
 
+## [1.2.0] - 2026-07
+
+Leaner on-screen output; the saved `.txt` artifact is unchanged and complete. The assessment itself is unchanged. Backward-compatible.
+
+- **Lean on-screen Snapshot**: in the chat, the Snapshot now shows a one-line reading frame + the Waypoint + the ADR core (Context / Decision / Why / Consequences + the owner/review blanks) + a two-line ADR-notes summary. The full POSTURE, the usage/license footer, and the ADR's closing explainer notes are written to the saved file and offered on request, no longer dumped inline.
+- **Need-named on-request options** (never tool jargon): e.g. "Read the full Posture", "Am I allowed to use this with my team, or a client?", "What's an ADR, and how do I use this one?", each with a short why-it's-worth-it hook.
+- **Close is a selection picker, not prose**, re-offered after each reveal so the reader can keep exploring, with a "Done, take the file" always present. (Picker caps at ~4 options, so items rotate rather than all showing at once.)
+- **Anti-duplication guard**: emit each block exactly once; defends against a generation glitch that occasionally echoed the ADR/footer (or a waypoint tail) twice in the on-screen print. The saved file was always clean.
+
 ## [1.1.1] - 2026-07
 
 Wording only, no behaviour or feature change. Backward-compatible.
