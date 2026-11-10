@@ -3,6 +3,14 @@
 All notable changes to the `team-maturity-self-locator` skill are recorded here.
 The skill line is versioned independently from the research-suite documents.
 
+## [1.2.1] - 2026-11
+
+Corrections only, no behaviour or feature change. Backward-compatible.
+
+- **Attributions re-checked** against the talk transcripts and the cited sources: cognitive and intent debt credited to Margaret-Anne Storey (as cited by Dragan Stepanović); Ship / Show / Ask credited to Rouan Wilsenach (cited by William Bernting); breadcrumbs to James Herr's team; beads to Steve Yegge; Lopez's *black box* sourced to his article; Lopez's own wording restored ("more close to the decisions taken inside the code").
+- **One wording fix**: collective ownership now reads "we missed it together, not just me" (the old "the team validated it" could suggest a bug was knowingly approved).
+- **Share-alike spelled out** in the usage footer: any adaptation you share stays under the same licence, CC BY-NC-SA 4.0.
+
 ## [1.2.0] - 2026-07
 
 Leaner on-screen output; the saved `.txt` artifact is unchanged and complete. The assessment itself is unchanged. Backward-compatible.
