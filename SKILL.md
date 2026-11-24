@@ -584,7 +584,7 @@ so the tool is built to evolve the same way it asks teams to.
 
 ### 2. Psychological safety (Clark's four stages)
 *The lens -* whether people feel safe enough to speak, ask, contribute and challenge, across Clark's four stages (inclusion → learner → contributor → challenger).
-- **L1 -** *None*, below inclusion; people don't speak up at all.
+- **L1 -** *None*: below inclusion; people don't speak up at all.
 - **L2 -** Fragile *inclusion*, you belong, but don't yet feel safe to learn out loud.
 - **L3 -** *Learner* safety, questions are welcome; challenging the status quo still feels risky.
 - **L4 -** *Contributor* safety, reaching toward challenger, people use their skills fully and begin to push back.
@@ -594,71 +594,71 @@ so the tool is built to evolve the same way it asks teams to.
 
 ### 3. Mental health
 *The lens -* the human cost and its sustainability: isolation, anxiety and imposter feelings versus belonging and a pace that lasts. *(A structural cause of apparent "underperformance" and **brownout**: the **Peter Principle**, someone promoted past their fit by a one-way ladder. Read the **role / system**, not the person, and widen the ladder with valued **horizontal growth**. It's org-level, not a team move; the ebook goes deeper.)*
-- **L1 -** *Isolation and anxiety*, the fear culture isolates; stress is carried alone, imposter feelings hidden.
-- **L2 -** *Strained*, solo work without support; the always-available AI makes withdrawal easy and anxiety builds quietly.
-- **L3 -** *Uneven*, some shared context eases the load, but it depends on who's present; the absent stay strained.
-- **L4 -** *Belonging returns*, **collective ownership** lowers individual anxiety ("we missed it together, not just me"); it's safe to say "I don't understand this."
-- **L5 -** *Sustainable belonging*, meaning and capacity are protected by design; the day's ceiling and the anxiety signal (incl. *AI brain fry*) are respected, not overridden.
+- **L1 -** *Isolation and anxiety*: the fear culture isolates; stress is carried alone, imposter feelings hidden.
+- **L2 -** *Strained*: solo work without support; the always-available AI makes withdrawal easy and anxiety builds quietly.
+- **L3 -** *Uneven*: some shared context eases the load, but it depends on who's present; the absent stay strained.
+- **L4 -** *Belonging returns*: **collective ownership** lowers individual anxiety ("we missed it together, not just me"); it's safe to say "I don't understand this."
+- **L5 -** *Sustainable belonging*: meaning and capacity are protected by design; the day's ceiling and the anxiety signal (incl. *AI brain fry*) are respected, not overridden.
 
 *To climb →* restore belonging (pairing, collective ownership) and protect capacity (learning hours, no-AI days, respect the ceiling and the anxiety signal).
 
 ### 4. Flow / value stream
 *The lens -* whether work actually flows to *done* across the whole value stream, or piles up busy-but-stuck, value, not volume.
-- **L1 -** *Overwhelmed*, work and stress pile up with no visible flow; everything is firefighting.
-- **L2 -** *Busy ≠ faster*, high individual activity, but volume isn't value; work sits in private queues.
-- **L3 -** *Bottlenecked*, work moves but jams at hand-offs and review; AI accelerates one stage and inventory piles at the next (scatter-gather).
-- **L4 -** *Keeping pace*, comprehension and review keep up with production; work flows to *done* rather than piling up busy-but-stuck.
-- **L5 -** *Flow*, the whole value stream is optimized for *value, not volume*; speed is pointed at the real constraint and work-in-process is limited.
+- **L1 -** *Overwhelmed*: work and stress pile up with no visible flow; everything is firefighting.
+- **L2 -** *Busy ≠ faster*: high individual activity, but volume isn't value; work sits in private queues.
+- **L3 -** *Bottlenecked*: work moves but jams at hand-offs and review; AI accelerates one stage and inventory piles at the next (scatter-gather).
+- **L4 -** *Keeping pace*: comprehension and review keep up with production; work flows to *done* rather than piling up busy-but-stuck (before picking up a new ticket, people first check whether a PR is waiting for review, and AI-generated code is read at the pace it is produced instead of stacking up unread).
+- **L5 -** *Flow*: the whole value stream is optimized for *value, not volume*; speed is pointed at the real constraint and work-in-process is limited.
 
 *To climb →* small batches, Trunk-Based Development + feature toggles, Ship/Show/Ask, limit work-in-process; optimize the whole value stream for steering, not speed.
 
 ### 5. Team cognitive load (Team Topologies)
 *The lens -* how much each person and team carries, and whether team boundaries and interaction modes are deliberate (Team Topologies, Skelton & Pais).
-- **L1 -** *Load ignored*, no attention to how much each person or team carries; overload is the unspoken norm.
-- **L2 -** *Individual silos*, load is dumped on individuals, each carrying a domain alone (a high **bus factor**, the risk when knowledge lives in one head: *what if they're hit by a bus?*).
-- **L3 -** *Ad-hoc collaboration*, teams help each other reactively, but boundaries and interaction modes aren't deliberate.
-- **L4 -** *Deliberate collaboration mode*, teams choose how they interact (collaboration, X-as-a-service, facilitating), for a bounded time.
-- **L5 -** *Managed load, clear bounds*, teams are organized around coherent business domains (a bounded context each); load stays sustainable and dependencies don't perpetually block.
+- **L1 -** *Load ignored*: no attention to how much each person or team carries; overload is the unspoken norm (one more project lands on a full plate, nobody asks what comes off, and saying "too much" feels like admitting you can't keep up).
+- **L2 -** *Individual silos*: load is dumped on individuals, each carrying a domain alone (a high **bus factor**, the risk when knowledge lives in one head: *what if they're hit by a bus?*).
+- **L3 -** *Ad-hoc collaboration*: teams help each other reactively, but boundaries and interaction modes aren't deliberate.
+- **L4 -** *Deliberate collaboration mode*: teams choose how they interact (collaboration, X-as-a-service, facilitating), for a bounded time.
+- **L5 -** *Managed load, clear bounds*: teams are organized around coherent business domains (a bounded context each); load stays sustainable and dependencies don't perpetually block.
 
 *To climb →* clear boundaries (ideally one bounded context per team), deliberate (temporary) interaction modes, and pair/mob to share load instead of siloing it.
 
 ### 6. Brown-out / burn-out
 *The lens -* meaning and capacity over time: **brown-out** = loss of meaning (the work stops mattering), **burn-out** = exhaustion (running on empty), the brown-out/bore-out framing from Bouzou & de Funès.
-- **L1 -** *Acute risk*, chronic fear and overload; meaning and energy drain fast.
-- **L2 -** *Eroding*, isolation and heads-down survival wear people down; brown-out (loss of meaning) creeps in.
-- **L3 -** *Easing but fragile*, some connection returns, but without held rituals it slides back.
-- **L4 -** *Returning*, belonging and shared ownership restore meaning and capacity.
-- **L5 -** *Sustainable, restored*, meaning and capacity are protected by systems; the AI-era overload signal (*brain fry*) is watched and the ceiling respected.
+- **L1 -** *Acute risk*: chronic fear and overload; meaning and energy drain fast (evenings spent replaying the day, Sunday dread before Monday).
+- **L2 -** *Eroding*: isolation and heads-down survival wear people down; brown-out (loss of meaning) creeps in ("I just close tickets, I no longer know what for").
+- **L3 -** *Easing but fragile*: some connection returns, but without held rituals it slides back (the pairing sessions that help, then vanish at the first deadline).
+- **L4 -** *Returning*: belonging and shared ownership restore meaning and capacity (people see what their work is for, and a hard day is shared, not carried alone).
+- **L5 -** *Sustainable, restored*: meaning and capacity are protected by systems; the AI-era overload signal (*brain fry*) is watched and the ceiling respected.
 
 *To climb →* protect meaning and capacity (learning hours, no-AI days), make the freed-time choice well (value, not volume), and respect the day's ceiling.
 
 ### 7. Shared mental model (cognitive, knowledge, intent debt)
 *The lens -* whether the team holds a shared *theory of the system* (Naur) or lets it fragment into **cognitive debt** (Storey, as cited by Stepanović; with its cousin **knowledge debt** / Lopez) and **intent debt** (Storey's triple-debt, the *why* never written down).
-- **L1 -** *None / eroded*, no shared theory of the system; understanding is absent or actively lost.
-- **L2 -** *Trapped in heads*, comprehension lives in individuals and never leaves; cognitive and knowledge debt accrue silently.
-- **L3 -** *Partial (present only)*, the model is held among whoever is present, lost across time zones and to the absent.
-- **L4 -** *Pooled / shared*, the team holds a shared model; an agent is one voice, never the verdict; "I don't understand this generated code" is sayable.
-- **L5 -** *Living artifacts*, the *why* lives in ADRs/breadcrumbs and is kept current (pair/mob); intent debt is paid down rather than accrued, and the team's **collective knowledge survives** people, interruptions and AI.
+- **L1 -** *None / eroded*: no shared theory of the system; understanding is absent or actively lost (nobody can explain why the system is built this way, the person who knew has left, and generated code gets merged without anyone being able to say what it does).
+- **L2 -** *Trapped in heads*: comprehension lives in individuals and never leaves; cognitive and knowledge debt accrue silently.
+- **L3 -** *Partial (present only)*: the model is held among whoever is present, lost across time zones and to the absent.
+- **L4 -** *Pooled / shared*: the team holds a shared model; an agent is one voice, never the verdict; "I don't understand this generated code" is sayable.
+- **L5 -** *Living artifacts*: the *why* lives in ADRs/breadcrumbs and is kept current (pair/mob); intent debt is paid down rather than accrued, and the team's **collective knowledge survives** people, interruptions and AI.
 
 *To climb →* capture the *why* in ADRs and keep it shared (pair/mob, breadcrumbs), paying down cognitive, knowledge and intent debt.
 
 ### 8. Culture (Westrum)
 *The lens -* how the organization handles information under pressure (Westrum): pathological → bureaucratic → generative.
-- **L1 -** *Pathological*, information is hidden, messengers are shot, failure is punished.
-- **L2 -** *Bureaucratic*, rules over purpose; information moves through channels, not freely.
-- **L3 -** *Bureaucratic+*, some openness, but bad news still travels slowly and partially.
-- **L4 -** *Generative-leaning*, information increasingly flows; failure starts to breed inquiry rather than blame.
-- **L5 -** *Generative*, information flows freely and failure breeds inquiry; a right to make mistakes and blameless reviews, the opposite of a culture of fear.
+- **L1 -** *Pathological*: information is hidden, messengers are shot, failure is punished.
+- **L2 -** *Bureaucratic*: rules over purpose; information moves through channels, not freely (a problem everyone has noticed waits for the right ticket and the next committee before anyone acts on it, and the process is followed even when nobody believes it serves the goal).
+- **L3 -** *Bureaucratic+*: some openness, but bad news still travels slowly and partially.
+- **L4 -** *Generative-leaning*: information increasingly flows; failure starts to breed inquiry rather than blame (bad news is raised at stand-up the same day, and after an incident the first question is what in the system let it happen, not who did it, though under deadline pressure the hunt for a culprit can still come back).
+- **L5 -** *Generative*: information flows freely and failure breeds inquiry; a right to make mistakes and blameless reviews, the opposite of a culture of fear.
 
 *To climb →* make information flow, blameless reviews, don't shoot the messenger, a right to make mistakes, visible team ground rules.
 
 ### 9. Feedback (the engine - cross-cutting)
 *The lens -* the cross-cutting engine: how short and wide the team's feedback loops are. Every rung up is a shorter or wider loop.
-- **L1 -** *Feared / suppressed*, feedback is a weapon or is avoided; loops are broken.
-- **L2 -** *Trapped*, feedback stays inside individuals; little reaches the team.
-- **L3 -** *Synchronous, partial*, feedback flows when people are in the room, but not across time or to the absent.
-- **L4 -** *Pooled, fast*, feedback is shared and quick (pairing, review, ADRs); loops shorten and widen.
-- **L5 -** *Continuous, systemic*, feedback is built into the system (tests, CI, retros, living docs), short and wide by default. Beware *cargo-cult feedback*, green but verifying nothing.
+- **L1 -** *Feared / suppressed*: feedback is a weapon or is avoided; loops are broken.
+- **L2 -** *Trapped*: feedback stays inside individuals; little reaches the team (someone notices the AI assistant keeps producing the same wrong pattern and fixes it on their side without telling anyone, so each person learns the lesson alone and the others fall into the same trap in turn).
+- **L3 -** *Synchronous, partial*: feedback flows when people are in the room, but not across time or to the absent.
+- **L4 -** *Pooled, fast*: feedback is shared and quick (pairing, review, ADRs); loops shorten and widen.
+- **L5 -** *Continuous, systemic*: feedback is built into the system (tests, CI, retros, living docs), short and wide by default. Beware *cargo-cult feedback*, green but verifying nothing.
 
 *To climb →* shorten and widen the loops, tests (seconds), pairing (instant), review and ADRs (across people and time), retros; and beware cargo-cult feedback.
 
