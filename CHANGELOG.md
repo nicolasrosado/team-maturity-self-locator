@@ -3,6 +3,20 @@
 All notable changes to the `team-maturity-self-locator` skill are recorded here.
 The skill line is versioned independently from the research-suite documents.
 
+## [1.3.0] - 2026-11
+
+Richer content and a sharper ADR; same assessment flow, same Waypoint format (v1). Backward-compatible: a Snapshot saved with 1.2.x loads unchanged.
+
+- **Axis 1 (the three bounds) rated through three short questions**, one per bound (information: what we can know; cognition: what we can make sense of; time: when we can think it through). The axis takes the lowest of the three, never an average, and names the bound that pulls it down. Time is now spelled out on every rung (L5: time protected by the system).
+- **Every rung illustrated**: the few rungs that had no concrete example now have one (axes 4 to 9), so a team can recognise itself.
+- **A sharper ADR**: a short *Considered options* section (including "change nothing for now"), a *What we give up* line, where the discussion happens (a retro or a short meeting, not PR comments), who settles it if no consensus comes, and *Rejected* as a normal outcome to keep. The artifacts handed to a team (Snapshot, Waypoint, ADR) carry no third-party names; credits stay in the skill.
+- **New moves and levers**, each credited: collective waiting when mobbing with AI (James Herr's team), a working agreement and "yes, and" to open a session, share the air, daily pairing (Steven Diamante), a safe-to-fail path for newcomers (time-to-autonomy, Julie Baillon), giving back to the digital commons at L5, and experimental ways to verify an agent's work.
+- **Levers defined once**: the seven levers that were described twice (glossary and how-to) now have a single line each, with credit, a one-sentence definition and how to run it.
+- **Credits re-checked**: sociable tests (Jay Fields, popularized by Martin Fowler), walking skeleton and ports & adapters (Alistair Cockburn), cognitive surrender (Steven Shaw & Gideon Nave, Wharton), anchoring (Tversky & Kahneman, 1974), and the speakers' practices named as the speakers follow them.
+- **"An environment / a culture, not a verdict"** used consistently, including in the Posture block.
+- **French answers about the licence** use the official Creative Commons names (*Partage dans les Mêmes Conditions*, never *à l'identique*), and share-alike is glossed as in the suite: any adaptation you share stays under the same licence.
+- **Leaner file**: the token estimate and the in-file changelog were removed (full history lives here).
+
 ## [1.2.1] - 2026-11
 
 Corrections only, no behaviour or feature change. Backward-compatible.

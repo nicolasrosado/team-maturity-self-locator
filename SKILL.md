@@ -1,6 +1,6 @@
 ---
 name: team-maturity-self-locator
-version: 1.2.1
+version: 1.3.0
 description: >
   Interactively locate a software team on the Bounded-Rationality Maturity Scale.
   Ask the user to rate their team on 9 axes (8 lenses + feedback), compute the level
@@ -12,7 +12,7 @@ description: >
 
 # Team Maturity Self-Locator (interactive)
 
-> **Version 1.2.1** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency - including on the licensing, which I'm sharing a tool under for the first time - is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
+> **Version 1.3.0** - *living tool, continuously improved.* Your feedback shapes the next version (see the close). Part of the Bounded-Rationality practitioner suite (Nicolas Rosado). The right to make mistakes this work advocates for applies to its author too, constructive feedback on any inconsistency - including on the licensing, which I'm sharing a tool under for the first time - is warmly welcome. Please be indulgent: we're in **continuous improvement**, an honest attempt to help teams locate themselves and grow on the scale.
 
 > **Install & run**, drop this folder into `~/.claude/skills/team-maturity-self-locator/`, then type `/team-maturity-self-locator` in Claude Code (or any Claude that loads skills). No setup; nothing leaves the conversation.
 
